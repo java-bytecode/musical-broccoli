@@ -15,15 +15,20 @@
             padding: 1em;
         }
 
-        #firstnameBox, #emailBox, #messageBox, #submitBtn {
+        span {
             display: block;
         }
 
-        #submitBtn
-        {
+        input{
+            margin-bottom: 10px;
+        }
+
+        #prglangRadioBtns {
             margin-top: 10px;
         }
-        input{
+
+        select {
+            margin-top: 10px;
             margin-bottom: 10px;
         }
 
@@ -130,7 +135,31 @@
     <input type="email" id="email" name="email" placeholder="Your email please!" pattern="^[\w.]+@[\w]+.[a-zA-Z]{3,4}$" required></span>
     <span id="messageBox"><label for="message"><strong>Message</strong></label>
     <textarea id="message" name="message" placeholder="Your message please!" required></textarea></span>
-    <span id="submitBtn"><input type="submit"></span>
+    <!-- Radio Buttons -->
+    <span id="prglangRadioBtns"><strong>Fav. Prog. Lang</strong> <label for="prglangJava"></label>Java</label>
+    <input type="radio" name="prglang" id="prglangJava" value="Java" required>
+    <label for="prglangC++">C++</label>
+    <input type="radio" name="prglang" id="prglangC++" value="C++" required>
+    </span>
+    <span><label><strong>Birthday</strong></label>    
+    <!-- Drop Down Box -->
+    <select name="month" id="monthStr">
+        <option>Month</option>
+        <option>January</option>
+    </select>
+    <select name="day">
+        <option>Day</option>
+        <option>1</option>
+    </select>
+    <select name="year">
+        <option>Year</option>
+        <option>2020</option>
+    </select>
+    <span></span>
+    <span><label for="termsandcond">I agree to the terms and conditions</label>
+    <input type="checkbox" name="termsandcond" id="termsandcond"></span>
+</span>
+<span id="submitBtn"><input type="submit"></span>
 </form>
 </div>
 
