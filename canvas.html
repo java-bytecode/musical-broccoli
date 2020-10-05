@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Kanit:ital,wght@1,600&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <title>Canvas</title>
+    <style>
+        h1{
+            font-family: 'Kanit', sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Major Mono Display', monospace;
+            text-align: center;
+        }
+    canvas {
+        border: 1px solid aquamarine;
+    }
+    </style>
+</head>
+<body>
+    <h1>CYBERxNUKE</h1>
+    <h2>HTML Canvas Assignment</h2>
+    <canvas id="canvasrect" width="400" height="500"></canvas>
+    <canvas id="canvasline" width="400" height="500"></canvas>
+    <canvas id="canvascircle" width="400" height="500"></canvas>
+    <!-- https://stackoverflow.com/questions/29315787/draw-to-canvas-only-after-google-web-font-is-loaded -->
+    <canvas id="canvastchtext" width="400" height="500"></canvas>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> -->
+    <script>
+
+        WebFontConfig = {
+        google:{ families: ['Faster One'] },
+        active: function(){start();},
+        };
+        (function(){
+        var wf = document.createElement("script");
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js';
+        wf.async = 'true';
+        document.head.appendChild(wf);
+        })();
+
+        var canvas1 = document.getElementById("canvasrect");
+        var canvas2 = document.getElementById("canvasline");
+        var canvas3 = document.getElementById("canvascircle");
+        
+        var ctx1 = canvas1.getContext("2d");
+        var ctx2 = canvas2.getContext("2d");
+        var ctx3 = canvas3.getContext("2d");
+
+        /* Rectangle */
+
+        //ctx1.fillStyle = "#FF0000";
+        // createLinearGradient args - Start points and end points
+        var grd = ctx1.createLinearGradient(0,0,400,200);
+        grd.addColorStop(0.2, '#00cc7a');
+        grd.addColorStop(1, "#66ffc2");
+        // Start at (0,0, draw and fill the color red in rectangle with 400x200 size.
+        //ctx1.fillRect(0,0,400,200);
+        ctx1.fillStyle = grd;
+        ctx1.fillRect(0,0,400,800);
+
+        /* Line */
+        ctx2.moveTo(0,0);
+        ctx2.lineTo(400,500);
+        ctx2.stroke();
+
+        /* Circle */
+        var grd2 = ctx3.createRadialGradient(75, 50, 5, 90, 60, 100);
+        ctx3.beginPath();
+        // Center Coordinate X, Center Coordinate Y, Radius, Start Angle, End Angle
+        ctx3.arc(200, 200, 100, 0, 2*Math.PI);
+        grd2.addColorStop(0, "red");
+        grd2.addColorStop(1, "white");
+        ctx3.fillStyle = grd2;
+        ctx3.fill();
+        ctx3.stroke();
+
+        // text
+        function start(){
+        var canvas4 = document.getElementById("canvastchtext");
+        var ctx4 = canvas4.getContext("2d");
+        var grd3 = ctx4.createLinearGradient(0,0,canvas4.width,0);
+        grd3.addColorStop("0"," magenta");
+        grd3.addColorStop("0.5", "blue");
+        grd3.addColorStop("1.0", "red");
+        ctx4.font = "65px Faster One";
+        ctx4.fillStyle = grd3;
+        ctx4.fillText("Techouts", 20, 250);
+        }
+    </script>
+</body>
+</html>
