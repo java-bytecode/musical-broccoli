@@ -1,0 +1,147 @@
+<!-- Document Type Declaration: Tells the browser what type of document it expect. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the HTML document-->
+    <meta charset="UTF-8">
+    <!-- The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device). -->
+    <!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberxNuke</title>
+    <style>
+        #contactform {
+            border: 1px solid aquamarine;
+            width: fit-content;
+            padding: 1em;
+        }
+
+        #firstnameBox, #emailBox, #messageBox, #submitBtn {
+            display: block;
+        }
+
+        #submitBtn
+        {
+            margin-top: 10px;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Homepage</h1>
+    <em>by &copy; CyberxNuke</em>
+    <!-- HTML Character Entities -->
+    <strong>2020</strong>
+<br><br>
+
+<!-- Inline CSS -->
+<div style="background-color: aquamarine; width: fit-content;">
+<code>public class HelloWorld {
+<br>            public static void main(String[] args) {
+<br>                System.out.println("Hello World");
+<br>&nbsp;&nbsp;}
+<br>        }
+</code>
+</div>
+
+<br>
+
+<img src="https://i.redd.it/famsaffgdj031.jpg" alt="Java Meme"/>
+<br><br>
+<a href="https://www.java.com" target="_blank">Download Java!</a>
+
+<div>
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Practice HTML</li>
+        <li>Practice CSS</li>
+        <li><strong><em>Programming Languages</em></strong><ul>
+            <li>Java</li>
+            <li>Javascript</li>
+        </ul></li>
+        <li>Java is awesome!</li>
+    </ul>
+</div>
+
+<div>
+    <h3>Ordered List</h3>
+    <ol start="3" reversed>
+        <li>Fruits
+            <ol type="i">
+                <!-- value attribute doesn't make sense in <ul> -->
+                <li value="1">Apple</li>
+                <li value="2">Orange</li>
+                <li value="3">Banana</li>
+                <li value="4">Grapes</li>
+            </ol></li>
+            <li>Not sure what to put here!</li>
+            <li>Watch a movie!</li>
+    </ol>
+</div>
+
+<h3>Table</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Serial Number</th>
+            <th>Member</th>
+            <th>Salary (in $)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Sarah</td>
+            <td>70,000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>70,000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jake</td>
+            <td>70,000</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Definitions</h4>
+
+<div id="definitions">
+    <DL> 
+    <DT> class
+    <DD>Class is a <em>blueprint</em>.
+    <DT> object 
+    <DD>Object is an <strong>instance</strong> of a class.
+    </DL>
+</div>
+
+<h4>Contact Me</h4>
+
+<div id="contactform">
+<form method="GET">
+    <span id="firstnameBox"><label for="name"><strong>Name</strong></label>
+    <input type="text" id="name" name="name" placeholder="Your name please!" required></span>
+    <span id="emailBox"><label for="email"><strong>Email</strong></label>
+    <input type="email" id="email" name="email" placeholder="Your email please!" pattern="^[\w.]+@[\w]+.[a-zA-Z]{3,4}$" required></span>
+    <span id="messageBox"><label for="message"><strong>Message</strong></label>
+    <textarea id="message" name="message" placeholder="Your message please!" required></textarea></span>
+    <span id="submitBtn"><input type="submit"></span>
+</form>
+</div>
+
+<!-- <h4>Embedding</h4>
+<embed src="https://"> -->
+
+<footer>
+    <p>Thanks for reviewing my page!</p>
+    <strong>Version 1</strong>
+    <address>CyberxNuke</address>
+</footer>
+
+</body>
+</html>
