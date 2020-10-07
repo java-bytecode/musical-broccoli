@@ -24,7 +24,7 @@ public class showMessage extends HttpServlet {
         int sum = num1 + num2;
         printWriter.println("Heya! Sum is " + (num1 + num2));
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("squareNumbers");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/squareNumbers");
         request.setAttribute("numberToSquare", sum);
         requestDispatcher.include(request, response);
 
